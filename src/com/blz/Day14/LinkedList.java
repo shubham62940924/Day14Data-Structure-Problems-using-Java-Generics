@@ -7,6 +7,7 @@
 	- Finally 56 is added to 30
 	- Ability to delete the first element in the LinkedList of sequence 56->30->70 - 
     Delete last
+    Search element
 	 */
 package com.blz.Day14;
 
@@ -115,5 +116,25 @@ public class LinkedList {
 			temp.next = null;
 		}
 	}
+	public void searchElement(Object data) {
+        byte flag = 0;
+        if (head == null)
+            System.out.println("No elements present to search");
+        else {
+            Node temp = head;
+            while (temp != null) {
+                if (data.equals(temp.data)) {
+                    flag = 1;
+                    System.out.println(data + " is present in linked list");
+                    break;
+                }
+                temp = temp.next;
+            }
+            if (flag == 0)
+                System.out.println(data + " is absent in linked list");
+        }
+    }
 
+
+}
 }
