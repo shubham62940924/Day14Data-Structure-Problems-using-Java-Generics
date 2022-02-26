@@ -5,7 +5,8 @@
 *  Node with data 70 is First Created
 	- Next 30 is added to 70
 	- Finally 56 is added to 30
-	- 
+	- Ability to delete the first element in the LinkedList of sequence 56->30->70 - 
+    
 	 */
 package com.blz.Day14;
 
@@ -51,7 +52,6 @@ public class LinkedList {
 		}
 	}
 
-	// AddLast
 	public void addLast(Object data) {
 		Node newNode = new Node(data);
 		if (head == null)
@@ -71,21 +71,28 @@ public class LinkedList {
 	 * add middle method
 	 */
 
-	public void addMiddle(Object data) {
+	public void addMiddle(Object data, Object data1) {
 		Node newNode = new Node(data);
 
 		if (head == null)
 			head = newNode;
 		else {
 			Node temp = head;
-			System.out.println("Enter the data after which new data should be added");
-			Object data1 = scanner.nextInt();
 			while (temp.data != data1) {
 				temp = temp.next;
 			}
 			newNode.next = temp.next;
 			temp.next = newNode;
 		}
+	}
+
+	// delete last method
+
+	public void deleteFirst() {
+		if (head == null)
+			System.out.println("No elements present to delete");
+		else
+			head = head.next;
 	}
 
 }
