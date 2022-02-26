@@ -36,7 +36,7 @@ public class LinkedList {
 
 	public void display() {
 		if (head == null)
-			System.out.println("No elements to display");
+			System.out.println("No elements  to display");
 		else {
 			Node temp = head;
 			while (temp.next != null) {
