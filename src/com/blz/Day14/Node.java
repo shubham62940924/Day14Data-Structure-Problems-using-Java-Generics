@@ -10,8 +10,7 @@ public class Node {
 		this.next = null;
 	}
 
-	@Override
-	public String toString() {
+	public String toString() {// Tostring
 		return "Node{" + "data=" + data + ", next=" + next + '}';
 	}
 }
